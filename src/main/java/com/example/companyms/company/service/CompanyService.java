@@ -1,6 +1,7 @@
 package com.example.companyms.company.service;
 
 
+import com.example.companyms.company.dto.ReviewMessage;
 import com.example.companyms.company.entity.Company;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface CompanyService {
     void addCompany(Company company);
 
     boolean deleteCompany(Long id);
+    public void updateCompanyRating(ReviewMessage reviewMessage);
 }
