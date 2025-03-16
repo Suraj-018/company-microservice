@@ -12,7 +12,18 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    public double getRating() {
+        return rating;
+    }
+
+    public Company setRating(double rating) {
+        this.rating = rating;
+        return this;
+    }
+
     private String description;
+    private double rating;
     public Company() {
     }
 
@@ -43,9 +54,10 @@ public class Company {
         return this;
     }
 
-    public Company(Long id, String name, String description) {
+    public Company(Long id, String name, String description, double rating) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.rating = rating;
     }
 }
